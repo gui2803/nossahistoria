@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa História</title>
+    <title>Contador do Amor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contador do Amor</h1>
-        <h2>❤️ Guilherme & Lara ❤️</h2>
-        <button onclick="alternarTema()">Trocar Tema</button>
-    </header>
-
-    <section>
-        <h2>Tempo de Namoro</h2>
-        <div id="contador">
-            <p id="contadorAnos"></p>
-            <p id="contadorTempo"></p>
+    <div class="container">
+        <h1 class="title">Contador do Amor</h1>
+        <button class="theme-toggle" onclick="alternarTema()">Trocar Tema</button>
+        
+        <div class="names">
+            <h2>Guilherme & Lara</h2>
+            <div class="hearts">💖 💖 💖</div>
         </div>
 
-        <h2>Nossas Fotos</h2>
-        <div>
-            <img src="foto1.jpg" alt="Foto 1" width="300">
-            <img src="foto2.jpg" alt="Foto 2" width="300">
+        <div class="photos">
+            <img src="foto1.jpg" alt="Foto de Guilherme e Lara" class="photo">
+            <img src="foto2.jpg" alt="Foto de Guilherme e Lara" class="photo">
         </div>
-    </section>
+
+        <div class="contador">
+            <h3>Tempo de Namoro</h3>
+            <div id="contadorAnosMesesDias">
+                <p id="contadorAnos"></p>
+            </div>
+            <div id="contadorTempo">
+                <p id="contadorHoras"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
