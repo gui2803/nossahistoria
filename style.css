@@ -1,38 +1,85 @@
 /* Estilos para o tema claro */
+/* Estilos principais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
-}
-
-header {
+    background-color: #f8d7d7; /* Rosa claro */
+    color: #8b1d4f; /* Rosa escuro */
     text-align: center;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-button {
+.container {
+    padding: 20px;
+}
+
+.title {
+    border: 2px solid #8b1d4f;
     padding: 10px;
-    background-color: #4CAF50;
+    color: #8b1d4f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.theme-toggle {
+    background-color: #8b1d4f;
     color: white;
+    padding: 10px;
     border: none;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #45a049;
+.theme-toggle:hover {
+    background-color: #a53b62;
+}
+
+.names h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.hearts {
+    font-size: 2.5em;
+}
+
+.photos {
+    margin: 20px 0;
+}
+
+.photo {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.contador h3 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#contadorAnosMesesDias p,
+#contadorTempo p {
+    font-size: 2em;
 }
 
 /* Estilos para o tema escuro */
 body.dark-mode {
-    background-color: #333;
-    color: #fff;
+    background-color: #1a1a1a; /* Preto */
+    color: #f8d7d7; /* Rosa claro */
 }
 
-body.dark-mode button {
-    background-color: #555;
-    color: white;
+body.dark-mode .title {
+    border-color: #f8d7d7;
+    color: #f8d7d7;
 }
 
-body.dark-mode button:hover {
-    background-color: #666;
+body.dark-mode .theme-toggle {
+    background-color: #f8d7d7;
+    color: #1a1a1a;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: #d6a3a3;
 }
