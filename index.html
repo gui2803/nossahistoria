@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Nossa História</h1>
-    <h2>❤️ Guilherme & Lara ❤️</h2>
-    
-    <div class="fotos">
-        <img src="foto1.jpg" alt="Foto do casal 1">
-        <img src="foto2.jpg" alt="Foto do casal 2">
-    </div>
+    <header>
+        <h1>Contador do Amor</h1>
+        <h2>❤️ Guilherme & Lara ❤️</h2>
+        <button onclick="alternarTema()">Trocar Tema</button>
+    </header>
 
-    <h3>Estamos juntos há:</h3>
-    <p id="contadorAnos"></p>
-    <p id="contadorTempo"></p>
+    <section>
+        <h2>Tempo de Namoro</h2>
+        <div id="contador">
+            <p id="contadorAnos"></p>
+            <p id="contadorTempo"></p>
+        </div>
 
-    <button onclick="alternarTema()">Alternar Tema</button>
+        <h2>Nossas Fotos</h2>
+        <div>
+            <img src="foto1.jpg" alt="Foto 1" width="300">
+            <img src="foto2.jpg" alt="Foto 2" width="300">
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
