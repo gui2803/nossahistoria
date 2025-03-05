@@ -1,4 +1,4 @@
-const dataInicio = new Date("2025-02-22T19:30:00"); // Data de início do namoro
+const dataInicio = new Date("2025-02-22T19:30:00"); // Data inicial do namoro
 
 function atualizarContador() {
     const agora = new Date();
@@ -9,7 +9,6 @@ function atualizarContador() {
     let meses = agora.getMonth() - dataInicio.getMonth();
     let dias = agora.getDate() - dataInicio.getDate();
 
-    // Ajuste para meses e dias negativos
     if (dias < 0) {
         meses--;
         dias += new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
@@ -19,7 +18,7 @@ function atualizarContador() {
         meses += 12;
     }
 
-    // Atualizar contador de anos, meses e dias
+    // Exibir anos, meses e dias
     document.getElementById("contadorAnos").innerText =
         `${anos} anos, ${meses} meses e ${dias} dias`;
 
@@ -28,8 +27,8 @@ function atualizarContador() {
     const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
     const segundos = Math.floor((diferenca / 1000) % 60);
 
-    // Atualizar contador de horas, minutos e segundos
-    document.getElementById("contadorTempo").innerText =
+    // Exibir horas, minutos e segundos
+    document.getElementById("contadorHoras").innerText =
         `${horas} horas, ${minutos} minutos e ${segundos} segundos`;
 
     // Atualizar a cada 1 segundo
@@ -37,7 +36,7 @@ function atualizarContador() {
 }
 
 function alternarTema() {
-    // Alterna a classe de tema
+    // Alterna a classe do tema
     document.body.classList.toggle("dark-mode");
 
     // Salva o tema no localStorage
@@ -50,10 +49,8 @@ function alternarTema() {
 
 // Ao carregar a página, verifica o tema salvo
 window.onload = () => {
-    // Verifica se o tema "escuro" está salvo
     if (localStorage.getItem("tema") === "escuro") {
         document.body.classList.add("dark-mode");
     }
-    // Atualiza o contador logo ao carregar a página
     atualizarContador();
 };
