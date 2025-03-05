@@ -9,11 +9,11 @@ function atualizarContador() {
     let meses = agora.getMonth() - dataInicio.getMonth();
     let dias = agora.getDate() - dataInicio.getDate();
 
+    // Ajuste para meses e dias negativos
     if (dias < 0) {
         meses--;
         dias += new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
     }
-
     if (meses < 0) {
         anos--;
         meses += 12;
@@ -37,9 +37,10 @@ function atualizarContador() {
 }
 
 function alternarTema() {
+    // Alterna a classe de tema
     document.body.classList.toggle("dark-mode");
 
-    // Salvar a preferência do tema no localStorage
+    // Salva o tema no localStorage
     if (document.body.classList.contains("dark-mode")) {
         localStorage.setItem("tema", "escuro");
     } else {
@@ -47,10 +48,12 @@ function alternarTema() {
     }
 }
 
-// Carregar a preferência de tema ao carregar a página
+// Ao carregar a página, verifica o tema salvo
 window.onload = () => {
+    // Verifica se o tema "escuro" está salvo
     if (localStorage.getItem("tema") === "escuro") {
         document.body.classList.add("dark-mode");
     }
+    // Atualiza o contador logo ao carregar a página
     atualizarContador();
 };
