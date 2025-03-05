@@ -1,4 +1,4 @@
-const dataInicio = new Date("2025-02-22T19:30:00"); // Data inicial
+const dataInicio = new Date("2025-02-22T19:30:00"); // Data de início do namoro
 
 function atualizarContador() {
     const agora = new Date();
