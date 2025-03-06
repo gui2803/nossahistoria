@@ -13,12 +13,23 @@ body {
     padding: 20px;
 }
 
-.title {
-    border: 2px solid #8b1d4f;
+/* Menu com título e botão de troca de tema */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid #8b1d4f; /* Borda externa */
+    border-radius: 8px;
     padding: 10px;
-    color: #8b1d4f;
-    font-size: 2.5em;
+    background-color: #fff; /* Fundo claro para o menu */
     margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #8b1d4f;
+    margin: 0;
+    padding: 0;
 }
 
 .theme-toggle {
@@ -27,13 +38,13 @@ body {
     padding: 10px;
     border: none;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
 .theme-toggle:hover {
     background-color: #a53b62;
 }
 
+/* Nome do casal e corações */
 .names h2 {
     font-size: 2em;
     margin: 10px 0;
@@ -43,17 +54,21 @@ body {
     font-size: 2.5em;
 }
 
+/* Fotos lado a lado e centralizadas */
 .photos {
+    display: flex;
+    justify-content: center;
     margin: 20px 0;
 }
 
 .photo {
-    max-width: 100%;
+    max-width: 45%;
     height: auto;
-    margin: 10px;
+    margin: 0 10px;
     border-radius: 10px;
 }
 
+/* Estilos do contador */
 .contador h3 {
     font-size: 2em;
     margin: 20px 0;
@@ -71,8 +86,12 @@ body.dark-mode {
 }
 
 body.dark-mode .title {
-    border-color: #f8d7d7;
     color: #f8d7d7;
+}
+
+body.dark-mode .menu {
+    background-color: #333;
+    border-color: #f8d7d7;
 }
 
 body.dark-mode .theme-toggle {
