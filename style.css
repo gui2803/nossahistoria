@@ -102,3 +102,52 @@ body.dark-mode .theme-toggle {
 body.dark-mode .theme-toggle:hover {
     background-color: #d6a3a3;
 }
+
+/* Media query para telas pequenas (dispositivos móveis) */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2em; /* Ajustar tamanho do título */
+    }
+
+    .theme-toggle {
+        margin-top: 10px;
+    }
+
+    /* Ajuste para fotos lado a lado */
+    .photos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        max-width: 80%; /* Fotos maiores em telas pequenas */
+        margin: 10px 0;
+    }
+
+    /* Ajuste do contador */
+    #contadorAnosMesesDias p,
+    #contadorTempo p {
+        font-size: 1.5em; /* Tamanho da fonte do contador menor */
+    }
+}
+
+/* Media query para telas muito pequenas (ex: smartphones verticais) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8em; /* Menor tamanho de fonte do título */
+    }
+
+    .photo {
+        max-width: 90%; /* Fotos ainda maiores em telas muito pequenas */
+    }
+
+    #contadorAnosMesesDias p,
+    #contadorTempo p {
+        font-size: 1.2em; /* Tamanho de fonte ainda menor no contador */
+    }
+}
